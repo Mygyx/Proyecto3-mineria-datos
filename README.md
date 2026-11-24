@@ -18,7 +18,7 @@ Proyecto3-mineria-datos/
 ```
 
 - `data/` contiene el CSV recibido del workshop 4.
-- `notebooks/` reúne los notebooks de trabajo y será la ubicación de `proyecto_3.ipynb`, que integrará el EDA y preprocesamiento, el modelado, la evaluación y las conclusiones. Antes de entregar, ese notebook debe poder ejecutarse de principio a fin usando el CSV de entrada.
+- `notebooks/proyecto_3.ipynb` contiene la introducción y la Fase I de Brian, con el EDA y la construcción de la tabla cliente-mes. Las siguientes fases del equipo se incorporarán al mismo notebook. Antes de entregar, debe poder ejecutarse de principio a fin usando el CSV de entrada.
 - `resultados/figuras/` y `resultados/tablas/` reúnen las exportaciones del notebook, como gráficos de evaluación, importancia de variables y la comparación de modelos en prueba.
 - `presentacion/` guarda las diapositivas y el guion de defensa. La presentación utiliza los resultados exportados desde el notebook.
 - `agentes.md` registra localmente las decisiones, las tareas y el avance de cada integrante.
@@ -47,4 +47,28 @@ Los ocho indicadores provienen de `KPIs.docx`, preparado para el Proyecto 2 con 
 
 Para calcular los KPI-01 a KPI-07 con `data_process.csv`, las columnas candidatas son `FechaFactura` para el mes, `ImporteLinea` para ingresos, `IdCliente` para compradores, `Cantidad` para unidades, `IdGenero` para género y `PaisCliente` para cobertura geográfica. La calidad de estos campos se revisará en el EDA. El KPI-08 requiere enriquecer el CSV con una relación verificada entre `IdCancion` y artista a partir del catálogo de Chinook.
 
-Los indicadores sirven para describir el desempeño histórico y formular preguntas de negocio. El equipo aún debe escoger el KPI prioritario y definir qué variable se intentará predecir en el [notebook del proyecto](notebooks/proyecto_3.ipynb).
+## Pregunta desarrollada y reparto actual
+
+La Fase I desarrolla la propuesta del **KPI-04 de retención**. Al cierre de un mes, ¿qué clientes que compraron ese mes volverán a comprar el siguiente? Cada ejemplo representa un cliente comprador y un mes de corte. `RecompraMesSiguiente` vale 1 si compra durante el mes calendario siguiente y 0 si ese mes es observable y no compra. El equipo debe ratificar esta pregunta antes del entrenamiento.
+
+| Integrante | Trabajo del Proyecto III |
+| --- | --- |
+| Brian | Fase I. Pregunta de negocio, EDA, construcción de la tabla cliente-mes y diccionario de variables. |
+| Miguel | Fase II. Partición temporal, preprocesamiento y ajuste de regresión logística y árbol de decisión. |
+| Jeremy | Fase III. Comparación sobre prueba independiente, análisis de errores e importancia de variables. |
+| Cristopher | Fase IV. Interpretación de negocio, tres recomendaciones, diapositivas y ensayo. |
+
+Brian y Miguel intercambiaron sus fases el 23 de noviembre de 2026. La tabla anterior de KPIs conserva los responsables del Proyecto II.
+
+## Ejecutar la Fase I
+
+1. Abrir [notebooks/proyecto_3.ipynb](notebooks/proyecto_3.ipynb) en Jupyter o Colab con Python 3 y las bibliotecas pandas, NumPy y Matplotlib 3.10 o posterior. La ejecución local se comprobó con Matplotlib 3.11.2.
+2. Conservar el CSV en `data/data_process.csv`. En Colab, crear la carpeta `data` en el directorio de trabajo y subir allí el CSV. Si se descarga el repositorio completo, ejecutar desde su raíz o desde `notebooks/`.
+3. Revisar la celda de configuración. `ULTIMO_MES_RESULTADO_COMPLETO` vale `2013-11` porque la última venta es del 22 de diciembre y falta confirmar el cierre del extracto. Al confirmar diciembre completo se puede cambiar a `2013-12` y volver a ejecutar.
+4. Ejecutar todas las celdas en orden. El notebook comprueba claves, importes, etiquetas y que los predictores se puedan reconstruir usando solo ventas conocidas al cierre. Exporta las tablas y las gráficas del EDA.
+
+Con el límite provisional de noviembre se generan **398 filas y 13 columnas**, con 39 recompras. Hay 325 casos anteriores a 2013 y 73 casos de 2013. La tabla está disponible en [resultados/tablas/cliente_mes.csv](resultados/tablas/cliente_mes.csv), junto con el [diccionario](resultados/tablas/diccionario_cliente_mes.csv). Las seis variables numéricas propuestas son recencia, facturas, gasto, diversidad de géneros, antigüedad observada y días de cobertura. El país es la variable categórica. El notebook documenta sus ventanas temporales y la variable de auditoría `Unidades90d`.
+
+El CSV del workshop conserva sus bytes originales. Las exportaciones derivadas se guardan en `resultados/`. La configuración por defecto excluye diciembre como mes de resultado. La tabla derivada incluye las etiquetas de 2013 para la evaluación final, que Miguel y Jeremy deben reservar al definir el protocolo de prueba.
+
+Se ejecutaron las **13 celdas de código de la Fase I**, incluidas las gráficas, y se revisaron visualmente las cuatro figuras. Las salidas están guardadas dentro del notebook. Las imágenes exportadas son [compras mensuales](resultados/figuras/eda_compras_mensuales.png), [retención mensual](resultados/figuras/eda_retencion_mensual.png), [atípicos](resultados/figuras/eda_atipicos_cliente_mes.png) y [correlaciones](resultados/figuras/eda_correlaciones_cliente_mes.png). El notebook incluye las conclusiones del EDA y el ejemplo rastreable que Brian puede explicar en la defensa. Miguel continúa con la partición y el preprocesamiento acordados, Jeremy con la evaluación y Cristopher con las recomendaciones y la presentación.
