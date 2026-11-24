@@ -67,6 +67,42 @@ Brian y Miguel intercambiaron sus fases el 23 de noviembre de 2026. La tabla ant
 3. Revisar la celda de configuración. `ULTIMO_MES_RESULTADO_COMPLETO` vale `2013-12`. Se adopta el historial cerrado de la práctica tras conciliar las 2.240 líneas y los importes de las 412 facturas con las exportaciones originales del Lab 4. Diciembre tiene siete facturas por 38,62 UM, coincidentes con el Data Warehouse del Proyecto II.
 4. Ejecutar todas las celdas en orden. El notebook comprueba claves, importes, etiquetas y que los predictores se puedan reconstruir usando solo ventas conocidas al cierre. Exporta las tablas y las gráficas del EDA.
 
+### Preparar Python en cada computadora
+
+GitHub comparte el código, los datos y las salidas guardadas del notebook. Las bibliotecas se instalan en el entorno de Python de cada computadora. Una persona que ya tenga las dependencias disponibles puede seleccionar ese entorno y ejecutar el notebook.
+
+En VS Code o Antigravity:
+
+1. Instalar o habilitar las extensiones **Python** y **Jupyter** si el editor las solicita al abrir el notebook.
+2. Pulsar **Select Kernel**, elegir **Python Environments** y seleccionar el Python que se utilizará para el proyecto.
+3. Si aparece una solicitud para instalar **ipykernel**, aceptar la instalación y esperar a que termine. Este paquete permite ejecutar Python como kernel del notebook.
+4. Si falta alguna biblioteca, agregar una celda de código de preparación y ejecutar:
+
+   ```python
+   %pip install pandas numpy "matplotlib>=3.10" scikit-learn
+   ```
+
+   `%pip` instala en el entorno del kernel seleccionado. pandas, NumPy y Matplotlib se usan en el EDA. scikit-learn se utilizará en las fases de modelado y evaluación.
+
+5. Cuando termine la instalación, pulsar **Restart**, confirmar si se solicita y después **Run All**.
+
+La celda de instalación sirve para preparar el entorno cuando faltan paquetes. Las instrucciones para preparar cada equipo están en este README y el código del análisis comienza con la carga del CSV.
+
+### Ejecutar las celdas en orden
+
+Al abrir una sesión nueva, usar **Run All** para cargar el CSV, construir las tablas y generar las gráficas en ese orden. Cada celda utiliza variables creadas por las anteriores. Las tablas y figuras visibles al abrir el archivo son salidas guardadas de una ejecución previa. El kernel recupera las variables al volver a ejecutar el código.
+
+| Aviso o error | Qué hacer |
+| --- | --- |
+| `Select Kernel` pide extensiones | Instalar o habilitar Python y Jupyter. Luego seleccionar un entorno de Python. |
+| Se solicita `ipykernel` | Instalarlo en el Python seleccionado y esperar a que el kernel esté disponible. |
+| `ModuleNotFoundError: No module named 'matplotlib'` | Ejecutar la celda de instalación anterior, reiniciar el kernel y usar **Run All**. |
+| `NameError: name 'resumen_mensual' is not defined` | Ejecutar **Run All** desde el principio para crear las variables antes de dibujar las gráficas. |
+
+En **Google Colab**, abrir el notebook, colocar el CSV en `data/data_process.csv` y ejecutar todas las celdas desde el principio. Si falta una biblioteca, la misma instrucción `%pip` permite instalarla en la sesión de Colab. La preparación de Colab corresponde a su entorno remoto y cada computadora local utiliza su propio entorno.
+
+### Resultados de la Fase I
+
 Se generan **405 filas y 13 columnas**, con 40 recompras. Hay 325 casos anteriores a 2013 y 80 casos de 2013. La tabla está disponible en [resultados/tablas/cliente_mes.csv](resultados/tablas/cliente_mes.csv), junto con el [diccionario](resultados/tablas/diccionario_cliente_mes.csv). Las seis variables numéricas propuestas son recencia, facturas, gasto, diversidad de géneros, antigüedad observada y días de cobertura. El país es la variable categórica. El notebook documenta sus ventanas temporales y la variable de auditoría `Unidades90d`.
 
 El CSV del workshop conserva sus bytes originales. Las exportaciones derivadas se guardan en `resultados/`. El último mes de corte es noviembre de 2013 y su resultado se observa en diciembre de 2013. Los compradores de diciembre requerirían observar enero de 2014 para construir otra cohorte supervisada. La tabla derivada incluye las etiquetas de 2013 para la evaluación final, que Miguel y Jeremy deben reservar al definir el protocolo de prueba.
