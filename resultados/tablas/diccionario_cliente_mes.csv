@@ -1,0 +1,14 @@
+Variable,Funcion,Unidad,DefinicionYVentana
+IdCliente,Clave,Identificador,Cliente del mes de corte
+MesCorte,Control temporal,AAAA-MM,Mes en que el cliente compró y se emite la predicción al cierre
+MesResultado,Control temporal,AAAA-MM,Mes calendario siguiente al corte
+FechaCorte,Control temporal,Fecha,Último día del mes de corte
+RecenciaDias,Predictor numérico,Días,Días desde última compra conocida hasta FechaCorte
+Facturas90d,Predictor numérico,Facturas distintas,"90 días hasta fin del mes de corte, inclusive"
+Gasto90dUM,Predictor numérico,UM,Suma de importes en la misma ventana de 90 días
+Unidades90d,Auditoría,Unidades,Suma de cantidades en la misma ventana de 90 días. Excluida de la selección inicial
+Generos90d,Predictor numérico,Géneros distintos,Diversidad de géneros en la misma ventana de 90 días
+AntiguedadObservadaDias,Predictor numérico,Días,Desde primera compra registrada hasta FechaCorte. Historia truncada al inicio del extracto
+DiasVentanaObservados,Predictor numérico,Días,Cobertura disponible del extracto en la ventana. Entre 1 y 90
+PaisCliente,Predictor categórico,País,País en la última venta conocida al corte
+RecompraMesSiguiente,Objetivo,0 o 1,1 si el cliente compra en MesResultado. 0 si ese mes es observable y no compra

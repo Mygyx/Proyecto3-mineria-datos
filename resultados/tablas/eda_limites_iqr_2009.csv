@@ -1,0 +1,8 @@
+,Q1,Q3,IQR,LimiteInferior,LimiteSuperior,CasosMarcados,PorcentajeMarcado
+RecenciaDias,16.75,25.0,8.25,4.375,37.375,0,0.0
+Facturas90d,1.0,1.0,0.0,1.0,1.0,10,13.157894736842104
+Gasto90dUM,1.98,8.91,6.93,-8.415,19.305,0,0.0
+Unidades90d,2.0,9.0,7.0,-8.5,19.5,0,0.0
+Generos90d,1.0,2.0,1.0,-0.5,3.5,12,15.789473684210526
+AntiguedadObservadaDias,24.0,117.0,93.0,-115.5,256.5,4,5.263157894736842
+DiasVentanaObservados,90.0,90.0,0.0,90.0,90.0,13,17.105263157894736

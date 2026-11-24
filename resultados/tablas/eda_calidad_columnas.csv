@@ -1,0 +1,67 @@
+Columna,TipoRecibido,ValoresDistintos,Nulos,VaciosTexto
+IdLineaFactura,int64,2240,0,0
+IdFactura,int64,412,0,0
+IdCancion,int64,1984,0,0
+PrecioUnitario,float64,2,0,0
+Cantidad,int64,1,0,0
+IdCliente,int64,59,0,0
+FechaFactura,str,354,0,0
+Cancion,str,1888,0,0
+IdGenero,int64,24,0,0
+DuracionMilisegundos,int64,1846,0,0
+PaisCliente,str,24,0,0
+ImporteLinea,float64,2,0,0
+DuracionMinutos,float64,1846,0,0
+AnioFactura,int64,5,0,0
+MesFactura,int64,12,0,0
+PrecioUnitarioNormalizado,float64,2,0,0
+DuracionNormalizada,float64,1846,0,0
+Genero_Alternative,int64,2,0,0
+Genero_Alternative & Punk,int64,2,0,0
+Genero_Blues,int64,2,0,0
+Genero_Bossa Nova,int64,2,0,0
+Genero_Classical,int64,2,0,0
+Genero_Comedy,int64,2,0,0
+Genero_Drama,int64,2,0,0
+Genero_Easy Listening,int64,2,0,0
+Genero_Electronica/Dance,int64,2,0,0
+Genero_Heavy Metal,int64,2,0,0
+Genero_Hip Hop/Rap,int64,2,0,0
+Genero_Jazz,int64,2,0,0
+Genero_Latin,int64,2,0,0
+Genero_Metal,int64,2,0,0
+Genero_Pop,int64,2,0,0
+Genero_R&B/Soul,int64,2,0,0
+Genero_Reggae,int64,2,0,0
+Genero_Rock,int64,2,0,0
+Genero_Rock And Roll,int64,2,0,0
+Genero_Sci Fi & Fantasy,int64,2,0,0
+Genero_Science Fiction,int64,2,0,0
+Genero_Soundtrack,int64,2,0,0
+Genero_TV Shows,int64,2,0,0
+Genero_World,int64,2,0,0
+PaisFacturacion_Argentina,int64,2,0,0
+PaisFacturacion_Australia,int64,2,0,0
+PaisFacturacion_Austria,int64,2,0,0
+PaisFacturacion_Belgium,int64,2,0,0
+PaisFacturacion_Brazil,int64,2,0,0
+PaisFacturacion_Canada,int64,2,0,0
+PaisFacturacion_Chile,int64,2,0,0
+PaisFacturacion_Czech Republic,int64,2,0,0
+PaisFacturacion_Denmark,int64,2,0,0
+PaisFacturacion_Finland,int64,2,0,0
+PaisFacturacion_France,int64,2,0,0
+PaisFacturacion_Germany,int64,2,0,0
+PaisFacturacion_Hungary,int64,2,0,0
+PaisFacturacion_India,int64,2,0,0
+PaisFacturacion_Ireland,int64,2,0,0
+PaisFacturacion_Italy,int64,2,0,0
+PaisFacturacion_Netherlands,int64,2,0,0
+PaisFacturacion_Norway,int64,2,0,0
+PaisFacturacion_Poland,int64,2,0,0
+PaisFacturacion_Portugal,int64,2,0,0
+PaisFacturacion_Spain,int64,2,0,0
+PaisFacturacion_Sweden,int64,2,0,0
+PaisFacturacion_USA,int64,2,0,0
+PaisFacturacion_United Kingdom,int64,2,0,0
+CategoriaPrecio,float64,2,0,0
