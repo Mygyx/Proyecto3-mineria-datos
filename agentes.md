@@ -16,8 +16,8 @@ Equipo: Miguel, Brian, Jeremy y Cristopher.
 - [ ] Ratificar con el equipo la pregunta de recompra implementada.
 - [x] Conciliar el CSV con las exportaciones originales del Lab 4 e incorporar diciembre de 2013 como mes de resultado.
 - [x] Ejecutar las 13 celdas de código de la Fase I y revisar las cuatro figuras del EDA con Matplotlib.
-- [ ] Definir el preprocesamiento y la partición temporal en la Fase II de Miguel.
-- [ ] Entrenar y ajustar al menos dos modelos supervisados.
+- [x] Definir el preprocesamiento y la partición temporal en la Fase II de Jeremy.
+- [x] Entrenar y ajustar al menos dos modelos supervisados con validación temporal, dejando 2013 reservado.
 - [ ] Evaluar ambos modelos en prueba independiente, seleccionar uno y explicar sus variables más importantes.
 - [ ] Ejecutar el notebook completo y preparar y ensayar la defensa.
 
@@ -27,7 +27,7 @@ Equipo: Miguel, Brian, Jeremy y Cristopher.
 | --- | --- |
 | [README.md](README.md) | Estructura del repositorio y rutas de carga según el directorio de trabajo. |
 | [data/](data/) | Contiene [data_process.csv](data/data_process.csv), el insumo procesado del workshop 4. |
-| [proyecto_3.ipynb](notebooks/proyecto_3.ipynb) | Introducción y Fase I ejecutadas con tablas, cuatro figuras y conclusiones del EDA. Fases II a IV pendientes. |
+| [proyecto_3.ipynb](notebooks/proyecto_3.ipynb) | Introducción y fases I y II ejecutadas: EDA, partición, pipelines, ajuste y modelos entrenados. Fases III y IV pendientes. |
 | [resultados/figuras/](resultados/figuras/) | Gráficos exportados para comparación y defensa. |
 | [resultados/tablas/](resultados/tablas/) | Tablas exportadas, incluida la comparación sobre el conjunto de prueba. |
 | [presentacion/](presentacion/) | Diapositivas ejecutivas y material de ensayo. |
@@ -38,11 +38,11 @@ Equipo: Miguel, Brian, Jeremy y Cristopher.
 | Responsable | Trabajo principal | Entrega al equipo |
 | --- | --- | --- |
 | Brian | Fase I. Plantear la pregunta de negocio, justificar el objetivo, hacer EDA y definir qué variables están disponibles al predecir. | Tabla cliente-mes y diccionario. Diagnóstico de tipos, cardinalidad, faltantes, atípicos y correlaciones. Ratificación de la pregunta pendiente del equipo. |
-| Miguel | Fase II. Implementar la partición y el preprocesamiento reproducible. Entrenar y ajustar al menos dos algoritmos adecuados usando validación dentro de entrenamiento. | Modelos comparables, hiperparámetros justificados y flujo reproducible de codificación, escalado e imputación según corresponda. |
-| Jeremy | Fase III. Evaluar ambos modelos sobre la misma prueba independiente y justificar la selección. Analizar los errores y estimar la importancia de las variables del modelo elegido. | Tabla de métricas, figuras e interpretación técnica para la presentación. |
+| Jeremy | Fase II. Implementar la partición y el preprocesamiento reproducible. Entrenar y ajustar al menos dos algoritmos adecuados usando validación dentro de entrenamiento. | Modelos comparables, hiperparámetros justificados y flujo reproducible de codificación, escalado e imputación según corresponda. |
+| Miguel | Fase III. Evaluar ambos modelos sobre la misma prueba independiente y justificar la selección. Analizar los errores y estimar la importancia de las variables del modelo elegido. | Tabla de métricas, figuras e interpretación técnica para la presentación. |
 | Cristopher | Fase IV. Convertir las métricas y la importancia de variables en conclusiones de negocio. Preparar las diapositivas y coordinar el ensayo. | Presentación con impacto operativo y al menos tres decisiones estratégicas concretas derivadas de los resultados. |
 
-Brian comunicó el intercambio de las fases I y II con Miguel el 23 de noviembre de 2026. Los cuatro acuerdan el objetivo y el esquema de validación antes de modelar. Cada integrante revisa el notebook completo y practica explicar el código, la teoría y las decisiones de las cuatro fases.
+Brian comunicó el intercambio de las fases I y II con Miguel el 23 de noviembre de 2026. Jeremy comunicó el intercambio de las fases II y III con Miguel el 24 de noviembre de 2026. Los cuatro acuerdan el objetivo y el esquema de validación antes de modelar. Cada integrante revisa el notebook completo y practica explicar el código, la teoría y las decisiones de las cuatro fases.
 
 ## KPIs y decisión pendiente
 
@@ -81,14 +81,14 @@ Si el equipo prefiere una decisión de planificación financiera, otra pregunta 
 
 ### Parte 1 · Pregunta, EDA y datos para el modelo
 
-**Brian lidera y Jeremy comprueba la etiqueta.** Esta parte ocupa las primeras secciones del notebook después de la introducción.
+**Brian lidera y Miguel comprueba la etiqueta.** Esta parte ocupa las primeras secciones del notebook después de la introducción.
 
 1. **Planteamiento.** Identificar al usuario de la predicción, la decisión que tomará y el momento en que recibe el resultado. Definir la clase positiva como «compró al menos una vez en el mes siguiente». Explicar con el ejemplo de enero y febrero cómo se pasa de línea de factura a cliente-mes y de cliente-mes a tasa mensual.
 2. **Calidad del CSV.** Presentar dimensiones, tipos, cardinalidad, rango de fechas y nulos por campo. Verificar que cada identificador de línea sea único y que las varias líneas de una misma factura se conserven. Contrastar importe con precio por cantidad y revisar los meses de cobertura. La última venta registrada es del 22 de diciembre de 2013. El CSV concilia con las exportaciones originales del Lab 4 y se adopta diciembre como mes de resultado del historial cerrado de la práctica.
 3. **Exploración.** Graficar por mes el número de compradores, las recompras y la tasa. Acompañar los porcentajes con los conteos. Usar boxplots e IQR para revisar gasto y frecuencia por cliente en entrenamiento. Una compra grande válida sigue siendo evidencia comercial. Registrar qué valores se conservaron, corrigieron o imputaron y por qué. Examinar correlaciones entre gasto, unidades y número de facturas antes de elegir predictores.
 4. **Tabla para entrenar.** Una fila por comprador activo y por mes de corte. Proponer como predictores los días desde la última compra al cierre, el número de facturas distintas, el gasto acumulado y la diversidad de géneros del periodo observado. Documentar la ventana histórica para cada uno y el tratamiento de clientes con poca historia al inicio del extracto. Usar el identificador para agrupar y comprobar las filas. Reservar toda la actividad del mes siguiente exclusivamente para construir la etiqueta. Diciembre de 2013 como **mes de corte** carece de enero de 2014 para observar el desenlace.
 
-**Entrega a Miguel.** Diccionario breve con nombre, unidad, ventana temporal y función de cada campo, conteos por mes y un ejemplo rastreable al CSV. El equipo podrá pasar al modelado cuando reconstruya la etiqueta de un cliente a mano y pueda explicar qué conocía al emitir la predicción.
+**Entrega a Jeremy.** Diccionario breve con nombre, unidad, ventana temporal y función de cada campo, conteos por mes y un ejemplo rastreable al CSV. El equipo podrá pasar al modelado cuando reconstruya la etiqueta de un cliente a mano y pueda explicar qué conocía al emitir la predicción.
 
 **Implementación de la Fase I, 23 de noviembre.** El notebook construye `resultados/tablas/cliente_mes.csv` y su diccionario. Usa ventanas de 90 días para frecuencia, gasto y diversidad, y calcula recencia, antigüedad observada, cobertura del historial y país conocido al corte. Los controles verifican etiquetas por un cálculo independiente y reconstruyen tres cortes después de retirar ventas futuras. En el bloque inicial de 2009, gasto y unidades tienen correlación 1. Se propone usar gasto y conservar unidades para auditoría. El IQR marca casos válidos de frecuencia, diversidad y cobertura inicial. Se conservan los registros.
 
@@ -98,7 +98,7 @@ Si el equipo prefiere una decisión de planificación financiera, otra pregunta 
 
 ### Parte 2 · Diseño de la prueba y entrenamiento
 
-**Miguel lidera y Brian revisa las fechas.** Registrar el protocolo antes de comparar resultados. La propuesta reserva los desenlaces de enero a diciembre de 2013 para prueba y usa los anteriores para desarrollo. La tabla de la Fase I contiene 80 casos con resultado en 2013 y siete positivos. Mantener reservadas para el final las predicciones y métricas de 2013.
+**Jeremy lidera y Brian revisa las fechas.** Registrar el protocolo antes de comparar resultados. La propuesta reserva los desenlaces de enero a diciembre de 2013 para prueba y usa los anteriores para desarrollo. La tabla de la Fase I contiene 80 casos con resultado en 2013 y siete positivos. Mantener reservadas para el final las predicciones y métricas de 2013.
 
 | Elemento | Cómo debe quedar explicado en el notebook |
 | --- | --- |
@@ -110,11 +110,11 @@ Si el equipo prefiere una decisión de planificación financiera, otra pregunta 
 | Modelo 2 | Árbol de decisión de profundidad limitada. Comparar profundidades y tamaños mínimos de hoja que permitan comprobar si hay reglas sencillas de frecuencia y recencia. Documentar los candidatos y el ajuste elegido. |
 | Selección | Proponer **F1 de la clase recompra** como criterio inicial si precisión y cobertura importan por igual. Elegir configuración y umbral con las predicciones de validación temporal, reuniendo los conteos de los bloques y mostrando también el desglose anual. Si la junta prioriza otro coste, acordar el criterio antes de mirar el desempeño final. |
 
-**Entrega a Jeremy.** Dos modelos ajustados sobre desarrollo, con variables, parámetros, umbrales, fechas y criterio de selección registrados. El mismo preprocesamiento debe poder aplicarse a cada mes futuro con información disponible en su cierre. [Validación temporal con origen móvil](https://otexts.com/fpp3/tscv.html) · [Prevención de fuga de información](https://scikit-learn.org/stable/common_pitfalls.html#data-leakage) · [Elección del umbral de decisión](https://scikit-learn.org/stable/modules/classification_threshold.html)
+**Entrega a Miguel.** Dos modelos ajustados sobre desarrollo, con variables, parámetros, umbrales, fechas y criterio de selección registrados. El mismo preprocesamiento debe poder aplicarse a cada mes futuro con información disponible en su cierre. [Validación temporal con origen móvil](https://otexts.com/fpp3/tscv.html) · [Prevención de fuga de información](https://scikit-learn.org/stable/common_pitfalls.html#data-leakage) · [Elección del umbral de decisión](https://scikit-learn.org/stable/modules/classification_threshold.html)
 
 ### Parte 3 · Comparación, errores e interpretación
 
-**Jeremy lidera y Miguel reproduce la comparación.** Aplicar los modelos fijados a los mismos casos reservados. Elaborar una tabla con una fila para la referencia y una para cada modelo. Incluir tamaño de prueba, positivos reales, umbral, exactitud, ROC/AUC, precisión, recall y F1. Trazar las curvas ROC usando las puntuaciones de los modelos. Adjuntar matrices de confusión con ejes y clase positiva identificados. Conservar las predicciones al nivel cliente-mes para rastrear de dónde sale cada cifra. [Métricas de evaluación de scikit-learn](https://scikit-learn.org/stable/modules/model_evaluation.html)
+**Miguel lidera y Jeremy reproduce la comparación.** Aplicar los modelos fijados a los mismos casos reservados. Elaborar una tabla con una fila para la referencia y una para cada modelo. Incluir tamaño de prueba, positivos reales, umbral, exactitud, ROC/AUC, precisión, recall y F1. Trazar las curvas ROC usando las puntuaciones de los modelos. Adjuntar matrices de confusión con ejes y clase positiva identificados. Conservar las predicciones al nivel cliente-mes para rastrear de dónde sale cada cifra. [Métricas de evaluación de scikit-learn](https://scikit-learn.org/stable/modules/model_evaluation.html)
 
 Explicar qué sucede cuando el modelo anticipa una recompra que no ocurre y cuando pasa por alto una recompra real. Hay siete positivos en los resultados de 2013. Acertar o perder **un solo caso** mueve el recall unos 14,3 puntos porcentuales. Mostrar los conteos junto a los porcentajes y señalar si la utilidad se concentra en pocos meses. Sustentar la selección comparando desempeño, facilidad de interpretación y estabilidad. Si la referencia sigue siendo competitiva, ese es un resultado defendible para la junta.
 
@@ -132,7 +132,7 @@ Para interpretar el modelo elegido, mostrar cuánto cambia una métrica al permu
 | Fijar cuántos clientes puede atender el equipo comercial por mes | Mostrar cómo cambian los contactos, los aciertos y las falsas alarmas con umbrales comparados en validación. | Revisar mensualmente cupo, coste de contacto y compras observadas en la cohorte. |
 | Decidir en qué condiciones mantener o suspender la priorización automática | Documentar si la ventaja se sostiene en periodos diferentes y qué ocurre en meses sin recompras. | Revisar errores y volumen de positivos al cierre. Si la ventaja es insuficiente, mantener una regla sencilla y recoger más meses antes de ampliar el uso. |
 
-**Guion propuesto de 12 láminas y 20 minutos.** Brian dedica cinco minutos a la decisión de la junta, el KPI y la construcción de la etiqueta (láminas 1–3). Miguel explica con una línea de tiempo la partición, la referencia y los dos modelos (4–6, cinco minutos). Jeremy presenta las métricas comparativas, los errores en clientes y las variables relevantes (7–9, cinco minutos). Cristopher cierra con las decisiones, las limitaciones y cómo se medirá el resultado del piloto (10–12, cinco minutos). Los cinco minutos siguientes son para preguntas individuales.
+**Guion propuesto de 12 láminas y 20 minutos.** Brian dedica cinco minutos a la decisión de la junta, el KPI y la construcción de la etiqueta (láminas 1–3). Jeremy explica con una línea de tiempo la partición, la referencia y los dos modelos (4–6, cinco minutos). Miguel presenta las métricas comparativas, los errores en clientes y las variables relevantes (7–9, cinco minutos). Cristopher cierra con las decisiones, las limitaciones y cómo se medirá el resultado del piloto (10–12, cinco minutos). Los cinco minutos siguientes son para preguntas individuales.
 
 En el ensayo, cada integrante explica una decisión de otra fase. Preguntas útiles son «¿por qué 2.240 líneas se convierten en 405 casos?», «¿qué información habría sido futura al cierre de enero?», «¿qué sucede con ROC/AUC en 2012?» y «¿cómo distinguiríamos una recompra prevista de una compra adicional causada por la campaña?». Registrar en el histórico los aportes y revisiones de cada persona.
 
@@ -152,7 +152,39 @@ El enunciado del proyecto, en sus fases I a IV y rúbrica, define los requisitos
 - **Notebook reproducible.** Usar pandas, NumPy, Matplotlib o Seaborn y scikit-learn. Documentar en Markdown el objetivo, EDA, limpieza, ingeniería de variables, partición, modelos y conclusiones. Fijar la semilla cuando corresponda, estratificar si hay desbalance y el esquema lo permite, y ajustar las transformaciones y los hiperparámetros con entrenamiento.
 - **Comparación sobre prueba independiente.** En clasificación, incluir matriz de confusión, exactitud y curva ROC/AUC. Si hay desbalance, añadir precisión, recall y F1 para interpretar la clase minoritaria. En regresión, incluir RMSE, MAE y R². Justificar el modelo elegido y mostrar la importancia de sus variables.
 - **Presentación ejecutiva.** Apuntar a 12 láminas dentro del límite indicado de 12 a 15. Explicar el impacto de las métricas para Grupo Innova S.A. y sustentar tres decisiones concretas. Ensayar 20 minutos de exposición y 5 de preguntas técnicas individuales.
-- **Rúbrica completa compartida el 23 de noviembre.** EDA y preparación 10 %, modelado y entrenamiento 30 %, evaluación y selección 20 %, impacto y recomendaciones 10 %, defensa oral y dominio individual 30 %. La defensa dura 20 minutos de exposición y 5 de preguntas individuales. El enunciado también evalúa la participación individual y la colaboración con el equipo. En el reparto vigente, Miguel implementa la codificación, el escalado y la partición dentro de su flujo de entrenamiento. Esos requisitos completan la Fase I del enunciado junto con el EDA y la ingeniería de variables de Brian.
+- **Rúbrica completa compartida el 23 de noviembre.** EDA y preparación 10 %, modelado y entrenamiento 30 %, evaluación y selección 20 %, impacto y recomendaciones 10 %, defensa oral y dominio individual 30 %. La defensa dura 20 minutos de exposición y 5 de preguntas individuales. El enunciado también evalúa la participación individual y la colaboración con el equipo. En el reparto vigente, Jeremy implementa la codificación, el escalado y la partición dentro de su flujo de entrenamiento. Esos requisitos completan la Fase I del enunciado junto con el EDA y la ingeniería de variables de Brian.
+
+
+### Implementación de la Fase II de Jeremy · 24 de noviembre
+
+Se continúa con el objetivo de recompra construido por Brian. Desarrollo
+contiene 325 casos anteriores a 2013; los 80 casos con resultado en 2013 quedan
+reservados para la Fase III de Miguel. La ratificación de la pregunta por todo
+el equipo conserva su estado pendiente.
+
+Los tres bloques crecientes entrenan hasta 2009/2010/2011 y validan
+2010/2011/2012. Se mantienen los meses completos. La partición aleatoria
+estratificada se sustituye por una validación cronológica coherente con el
+momento de predicción, documentando el desbalance y comparando pesos de clase.
+
+Se ajustan ocho configuraciones de regresión logística y doce de árbol,
+con nueve umbrales fijados previamente. Los transformadores se aprenden
+dentro del entrenamiento de cada bloque. El criterio es F1 positivo conjunto
+de las 249 predicciones fuera de entrenamiento. Se registra también el
+desglose anual y se conserva 2012 con ROC/AUC no definida por tener una clase.
+
+La logística quedó con C=1 y umbral 0.1; el árbol, con profundidad 2, diez
+casos por hoja y umbral 0.5. Ambos quedaron sin pesos. Sus F1 de validación
+son 0.3048 y 0.5484. Los dos pipelines finales y la referencia se ajustan con
+desarrollo; sus resultados de prueba y el ganador quedan para Miguel.
+
+El notebook deja `modelos_ajustados`, `umbrales_modelos`, `X_prueba`,
+`y_prueba`, las claves reservadas y modelos por bloque para continuar la
+interpretación con validación fuera de entrenamiento. Exporta ocho archivos
+de tablas/protocolo y dos figuras `fase2_*`. La Fase I y el CSV de entrada
+conservan sus datos. La ejecución de las fases implementadas pasó desde un
+kernel nuevo con 21 celdas de código, incluida la celda de instalación de
+Matplotlib que ya existía.
 
 ## Histórico
 
@@ -169,6 +201,7 @@ El enunciado del proyecto, en sus fases I a IV y rúbrica, define los requisitos
 | 2026-11-23 | Cierre del EDA de Brian, con asistencia de Codex | Dependencias oficiales obtenidas desde PyPI. Se ejecutaron las 13 celdas de código de la Fase I, se revisaron cuatro figuras y se añadieron conclusiones y puntos de defensa. Se comprobó la rúbrica completa, incluido el 30 % de defensa. El quinto commit incorpora este cierre. | Ratificar la pregunta de recompra y confirmar la cobertura de diciembre. Miguel continúa con partición, preprocesamiento y modelos. |
 | 2026-11-23 | Inclusión de diciembre por Brian, con asistencia de Codex | CSV conciliado con las exportaciones originales del Lab 4. Se adopta diciembre como mes de resultado, se agregan siete casos y una recompra y se concilian 59 tasas mensuales con el Proyecto II. Las tablas y explicaciones se actualizan a 405 casos y 40 recompras. | Miguel recibe 325 casos anteriores a 2013 y 80 casos de 2013 para registrar su protocolo temporal. El equipo ratifica la pregunta de recompra. |
 | 2026-11-23 | Guía de ejecución para el equipo | README ampliado con selección del kernel, extensiones Python y Jupyter, instalación de dependencias por entorno y ejecución mediante Restart y Run All. Se documentaron los errores de biblioteca ausente y variable sin definir observados durante la ejecución de Brian. | Cada integrante prepara su entorno y ejecuta el notebook desde el principio antes de continuar su fase. |
+| 2026-11-24 | Fase II de Jeremy | Intercambio con Miguel registrado en el reparto vigente. Partición temporal, pipelines, referencia y dos algoritmos ajustados con validación 2010–2012; 2013 reservado. Se ejecutaron las 21 celdas de código de las fases I y II y se generaron dos figuras y ocho archivos de control/validación. | Miguel continúa la Fase III: comparación en prueba, errores e importancia. Cristopher prepara la interpretación ejecutiva. |
 
 Se corrigió el correo de autor y committer de los cinco commits locales de Brian para usar `163876255+Brianrp19@users.noreply.github.com`. La configuración de este repositorio usa ese correo para los siguientes commits. El cambio se realizó después del rechazo GH007 por privacidad.
 
