@@ -1,0 +1,99 @@
+{
+  "responsable": "Jeremy Rodriguez Esquivel",
+  "siguiente_fase": "Miguel / Fase III",
+  "semilla": 42,
+  "sha256_entrada": "ca4a465b05c5df5a80905b2592c68c911ffc98bf2a3e6126681390401331843b",
+  "objetivo": "RecompraMesSiguiente",
+  "predictores": [
+    "RecenciaDias",
+    "Facturas90d",
+    "Gasto90dUM",
+    "Generos90d",
+    "AntiguedadObservadaDias",
+    "DiasVentanaObservados",
+    "PaisCliente"
+  ],
+  "desarrollo": {
+    "desde": "2009-02",
+    "hasta": "2012-12",
+    "casos": 325
+  },
+  "prueba": {
+    "desde": "2013-01",
+    "hasta": "2013-12",
+    "casos": 80,
+    "predicha_en_fase2": false,
+    "evaluada_en_fase2": false
+  },
+  "validaciones": [
+    2010,
+    2011,
+    2012
+  ],
+  "criterio": "F1 positivo conjunto en validacion temporal 2010-2012",
+  "desempate": "Precision mayor; umbral mas cercano a 0.5; orden de rejilla; umbral menor",
+  "estratificacion": "Se conserva la cronologia y cada mes completo; sin reparto aleatorio de fechas",
+  "rejillas": {
+    "RegresionLogistica": {
+      "modelo__C": [
+        0.01,
+        0.1,
+        1.0,
+        10.0
+      ],
+      "modelo__class_weight": [
+        null,
+        "balanced"
+      ]
+    },
+    "ArbolDecision": {
+      "modelo__class_weight": [
+        null,
+        "balanced"
+      ],
+      "modelo__max_depth": [
+        1,
+        2,
+        3
+      ],
+      "modelo__min_samples_leaf": [
+        10,
+        5
+      ]
+    }
+  },
+  "umbrales_candidatos": [
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    0.9
+  ],
+  "umbrales_elegidos": {
+    "ArbolDecision": 0.5,
+    "RegresionLogistica": 0.1,
+    "Referencia": 0.5
+  },
+  "parametros_elegidos": {
+    "ArbolDecision": {
+      "modelo__class_weight": null,
+      "modelo__max_depth": 2,
+      "modelo__min_samples_leaf": 10
+    },
+    "RegresionLogistica": {
+      "modelo__C": 1.0,
+      "modelo__class_weight": null
+    }
+  },
+  "versiones": {
+    "python": "3.13.13",
+    "pandas": "3.1.1",
+    "numpy": "2.5.5",
+    "matplotlib": "3.11.2",
+    "scikit-learn": "1.9.1"
+  }
+}

@@ -1,0 +1,4 @@
+Validacion,EntrenarHasta,CasosTrain,PositivosTrain,CasosValidacion,PositivosValidacion,ROC_AUC_Definida
+2010,2009-12,76,11,83,12,True
+2011,2010-12,159,23,83,10,True
+2012,2011-12,242,33,83,0,False
