@@ -1,0 +1,241 @@
+﻿IdCliente,MesCorte,MesResultado,Modelo,Real,ProbabilidadRecompra,Umbral,Prediccion,FalsaAlarma,RecompraPerdida,RecompraDetectada
+1,2012-12,2013-01,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+15,2012-12,2013-01,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+16,2012-12,2013-01,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+18,2012-12,2013-01,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+20,2012-12,2013-01,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+24,2012-12,2013-01,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+51,2012-12,2013-01,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+3,2013-01,2013-02,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+30,2013-01,2013-02,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+39,2013-01,2013-02,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+53,2013-01,2013-02,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+54,2013-01,2013-02,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+56,2013-01,2013-02,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+58,2013-01,2013-02,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+9,2013-02,2013-03,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+18,2013-02,2013-03,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+32,2013-02,2013-03,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+33,2013-02,2013-03,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+35,2013-02,2013-03,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+11,2013-03,2013-04,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+12,2013-03,2013-04,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+14,2013-03,2013-04,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+37,2013-03,2013-04,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+41,2013-03,2013-04,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+47,2013-03,2013-04,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+56,2013-03,2013-04,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+16,2013-04,2013-05,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+20,2013-04,2013-05,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+26,2013-04,2013-05,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+35,2013-04,2013-05,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+49,2013-04,2013-05,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+5,2013-05,2013-06,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+14,2013-05,2013-06,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+28,2013-05,2013-06,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+50,2013-05,2013-06,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+52,2013-05,2013-06,Referencia mayoritaria,1,0.10153846153846154,0.5,0,False,True,False
+54,2013-05,2013-06,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+58,2013-05,2013-06,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+7,2013-06,2013-07,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+29,2013-06,2013-07,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+31,2013-06,2013-07,Referencia mayoritaria,1,0.10153846153846154,0.5,0,False,True,False
+33,2013-06,2013-07,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+37,2013-06,2013-07,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+43,2013-06,2013-07,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+52,2013-06,2013-07,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+8,2013-07,2013-08,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+10,2013-07,2013-08,Referencia mayoritaria,1,0.10153846153846154,0.5,0,False,True,False
+12,2013-07,2013-08,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+16,2013-07,2013-08,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+22,2013-07,2013-08,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+31,2013-07,2013-08,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+45,2013-07,2013-08,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+1,2013-08,2013-09,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+10,2013-08,2013-09,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+24,2013-08,2013-09,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+46,2013-08,2013-09,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+48,2013-08,2013-09,Referencia mayoritaria,1,0.10153846153846154,0.5,0,False,True,False
+50,2013-08,2013-09,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+54,2013-08,2013-09,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+3,2013-09,2013-10,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+25,2013-09,2013-10,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+27,2013-09,2013-10,Referencia mayoritaria,1,0.10153846153846154,0.5,0,False,True,False
+29,2013-09,2013-10,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+33,2013-09,2013-10,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+39,2013-09,2013-10,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+48,2013-09,2013-10,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+4,2013-10,2013-11,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+6,2013-10,2013-11,Referencia mayoritaria,1,0.10153846153846154,0.5,0,False,True,False
+8,2013-10,2013-11,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+12,2013-10,2013-11,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+18,2013-10,2013-11,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+27,2013-10,2013-11,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+41,2013-10,2013-11,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+6,2013-11,2013-12,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+20,2013-11,2013-12,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+42,2013-11,2013-12,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+44,2013-11,2013-12,Referencia mayoritaria,1,0.10153846153846154,0.5,0,False,True,False
+46,2013-11,2013-12,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+50,2013-11,2013-12,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+56,2013-11,2013-12,Referencia mayoritaria,0,0.10153846153846154,0.5,0,False,False,False
+1,2012-12,2013-01,Regresión logística,0,0.0006002767990296904,0.1,0,False,False,False
+15,2012-12,2013-01,Regresión logística,0,0.13904393392384967,0.1,1,True,False,False
+16,2012-12,2013-01,Regresión logística,0,0.03111768448105835,0.1,0,False,False,False
+18,2012-12,2013-01,Regresión logística,0,0.04643120307079439,0.1,0,False,False,False
+20,2012-12,2013-01,Regresión logística,0,0.02188363378589392,0.1,0,False,False,False
+24,2012-12,2013-01,Regresión logística,0,0.008779835010015393,0.1,0,False,False,False
+51,2012-12,2013-01,Regresión logística,0,0.011466606414892437,0.1,0,False,False,False
+3,2013-01,2013-02,Regresión logística,0,0.010622492016166635,0.1,0,False,False,False
+30,2013-01,2013-02,Regresión logística,0,0.020987520013264795,0.1,0,False,False,False
+39,2013-01,2013-02,Regresión logística,0,0.0008253604429183189,0.1,0,False,False,False
+53,2013-01,2013-02,Regresión logística,0,0.14751861632194332,0.1,1,True,False,False
+54,2013-01,2013-02,Regresión logística,0,0.04251021510862568,0.1,0,False,False,False
+56,2013-01,2013-02,Regresión logística,0,0.02878181524261507,0.1,0,False,False,False
+58,2013-01,2013-02,Regresión logística,0,0.04219576807043828,0.1,0,False,False,False
+9,2013-02,2013-03,Regresión logística,0,0.007570396257017526,0.1,0,False,False,False
+18,2013-02,2013-03,Regresión logística,0,0.0007586639181523764,0.1,0,False,False,False
+32,2013-02,2013-03,Regresión logística,0,0.11609410417176694,0.1,1,True,False,False
+33,2013-02,2013-03,Regresión logística,0,0.03259926248787789,0.1,0,False,False,False
+35,2013-02,2013-03,Regresión logística,0,0.017726933269886818,0.1,0,False,False,False
+11,2013-03,2013-04,Regresión logística,0,0.07319454322573223,0.1,0,False,False,False
+12,2013-03,2013-04,Regresión logística,0,0.019859830519221314,0.1,0,False,False,False
+14,2013-03,2013-04,Regresión logística,0,0.028808282371884538,0.1,0,False,False,False
+37,2013-03,2013-04,Regresión logística,0,0.1400503928411678,0.1,1,True,False,False
+41,2013-03,2013-04,Regresión logística,0,0.05759721113933573,0.1,0,False,False,False
+47,2013-03,2013-04,Regresión logística,0,0.00712582498608949,0.1,0,False,False,False
+56,2013-03,2013-04,Regresión logística,0,0.00038309320247151003,0.1,0,False,False,False
+16,2013-04,2013-05,Regresión logística,0,0.07552987080502768,0.1,0,False,False,False
+20,2013-04,2013-05,Regresión logística,0,0.05384915691285259,0.1,0,False,False,False
+26,2013-04,2013-05,Regresión logística,0,0.0124568350510884,0.1,0,False,False,False
+35,2013-04,2013-05,Regresión logística,0,0.00026779295624813405,0.1,0,False,False,False
+49,2013-04,2013-05,Regresión logística,0,0.12495336726082977,0.1,1,True,False,False
+5,2013-05,2013-06,Regresión logística,0,0.006498075739303195,0.1,0,False,False,False
+14,2013-05,2013-06,Regresión logística,0,0.0004400837368066652,0.1,0,False,False,False
+28,2013-05,2013-06,Regresión logística,0,0.08678101379982918,0.1,0,False,False,False
+50,2013-05,2013-06,Regresión logística,0,0.25492561088503396,0.1,1,True,False,False
+52,2013-05,2013-06,Regresión logística,1,0.2007129025374633,0.1,1,False,False,True
+54,2013-05,2013-06,Regresión logística,0,0.10730848424237487,0.1,1,True,False,False
+58,2013-05,2013-06,Regresión logística,0,0.10656807303711896,0.1,1,True,False,False
+7,2013-06,2013-07,Regresión logística,0,0.11980806099791562,0.1,1,True,False,False
+29,2013-06,2013-07,Regresión logística,0,0.1990468799514729,0.1,1,True,False,False
+31,2013-06,2013-07,Regresión logística,1,0.1794909943475224,0.1,1,False,False,True
+33,2013-06,2013-07,Regresión logística,0,0.08957367587415327,0.1,0,False,False,False
+37,2013-06,2013-07,Regresión logística,0,0.0564179845252214,0.1,0,False,False,False
+43,2013-06,2013-07,Regresión logística,0,0.013193293957941069,0.1,0,False,False,False
+52,2013-06,2013-07,Regresión logística,0,0.0005306597913486373,0.1,0,False,False,False
+8,2013-07,2013-08,Regresión logística,0,0.20433326986314693,0.1,1,True,False,False
+10,2013-07,2013-08,Regresión logística,1,0.10999069860759478,0.1,1,False,False,True
+12,2013-07,2013-08,Regresión logística,0,0.05923605517123265,0.1,0,False,False,False
+16,2013-07,2013-08,Regresión logística,0,0.03307143394286222,0.1,0,False,False,False
+22,2013-07,2013-08,Regresión logística,0,0.013162630082331492,0.1,0,False,False,False
+31,2013-07,2013-08,Regresión logística,0,0.00043721810981307515,0.1,0,False,False,False
+45,2013-07,2013-08,Regresión logística,0,0.1198871870335657,0.1,1,True,False,False
+1,2013-08,2013-09,Regresión logística,0,0.009051043072819882,0.1,0,False,False,False
+10,2013-08,2013-09,Regresión logística,0,0.00026294192910472186,0.1,0,False,False,False
+24,2013-08,2013-09,Regresión logística,0,0.08147398193962442,0.1,0,False,False,False
+46,2013-08,2013-09,Regresión logística,0,0.2046450744669328,0.1,1,True,False,False
+48,2013-08,2013-09,Regresión logística,1,0.11054848243917247,0.1,1,False,False,True
+50,2013-08,2013-09,Regresión logística,0,0.11224613852233294,0.1,1,True,False,False
+54,2013-08,2013-09,Regresión logística,0,0.04514592445319756,0.1,0,False,False,False
+3,2013-09,2013-10,Regresión logística,0,0.09650764011419967,0.1,0,False,False,False
+25,2013-09,2013-10,Regresión logística,0,0.1264401300600783,0.1,1,True,False,False
+27,2013-09,2013-10,Regresión logística,1,0.12945330708007616,0.1,1,False,False,True
+29,2013-09,2013-10,Regresión logística,0,0.0890421150586578,0.1,0,False,False,False
+33,2013-09,2013-10,Regresión logística,0,0.03725592380617563,0.1,0,False,False,False
+39,2013-09,2013-10,Regresión logística,0,0.011589173060496638,0.1,0,False,False,False
+48,2013-09,2013-10,Regresión logística,0,0.00027961930536683256,0.1,0,False,False,False
+4,2013-10,2013-11,Regresión logística,0,0.16229843688502904,0.1,1,True,False,False
+6,2013-10,2013-11,Regresión logística,1,0.0715858614195602,0.1,0,False,True,False
+8,2013-10,2013-11,Regresión logística,0,0.09174157893237528,0.1,0,False,False,False
+12,2013-10,2013-11,Regresión logística,0,0.022739495122557785,0.1,0,False,False,False
+18,2013-10,2013-11,Regresión logística,0,0.01022025398692114,0.1,0,False,False,False
+27,2013-10,2013-11,Regresión logística,0,0.0003367218840188987,0.1,0,False,False,False
+41,2013-10,2013-11,Regresión logística,0,0.07663100443723073,0.1,0,False,False,False
+6,2013-11,2013-12,Regresión logística,0,1.9726331860838163e-06,0.1,0,False,False,False
+20,2013-11,2013-12,Regresión logística,0,0.0717386397756503,0.1,0,False,False,False
+42,2013-11,2013-12,Regresión logística,0,0.11038091566142509,0.1,1,True,False,False
+44,2013-11,2013-12,Regresión logística,1,0.1013094427643715,0.1,1,False,False,True
+46,2013-11,2013-12,Regresión logística,0,0.08631084620844665,0.1,0,False,False,False
+50,2013-11,2013-12,Regresión logística,0,0.044360800933536636,0.1,0,False,False,False
+56,2013-11,2013-12,Regresión logística,0,0.006601393267393875,0.1,0,False,False,False
+1,2012-12,2013-01,Árbol de decisión,0,0.005405405405405406,0.5,0,False,False,False
+15,2012-12,2013-01,Árbol de decisión,0,0.0,0.5,0,False,False,False
+16,2012-12,2013-01,Árbol de decisión,0,0.3563218390804598,0.5,0,False,False,False
+18,2012-12,2013-01,Árbol de decisión,0,0.3563218390804598,0.5,0,False,False,False
+20,2012-12,2013-01,Árbol de decisión,0,0.005405405405405406,0.5,0,False,False,False
+24,2012-12,2013-01,Árbol de decisión,0,0.005405405405405406,0.5,0,False,False,False
+51,2012-12,2013-01,Árbol de decisión,0,0.005405405405405406,0.5,0,False,False,False
+3,2013-01,2013-02,Árbol de decisión,0,0.005405405405405406,0.5,0,False,False,False
+30,2013-01,2013-02,Árbol de decisión,0,0.005405405405405406,0.5,0,False,False,False
+39,2013-01,2013-02,Árbol de decisión,0,0.005405405405405406,0.5,0,False,False,False
+53,2013-01,2013-02,Árbol de decisión,0,0.0,0.5,0,False,False,False
+54,2013-01,2013-02,Árbol de decisión,0,0.3563218390804598,0.5,0,False,False,False
+56,2013-01,2013-02,Árbol de decisión,0,0.3563218390804598,0.5,0,False,False,False
+58,2013-01,2013-02,Árbol de decisión,0,0.005405405405405406,0.5,0,False,False,False
+9,2013-02,2013-03,Árbol de decisión,0,0.005405405405405406,0.5,0,False,False,False
+18,2013-02,2013-03,Árbol de decisión,0,0.005405405405405406,0.5,0,False,False,False
+32,2013-02,2013-03,Árbol de decisión,0,0.0,0.5,0,False,False,False
+33,2013-02,2013-03,Árbol de decisión,0,0.3563218390804598,0.5,0,False,False,False
+35,2013-02,2013-03,Árbol de decisión,0,0.3563218390804598,0.5,0,False,False,False
+11,2013-03,2013-04,Árbol de decisión,0,0.0,0.5,0,False,False,False
+12,2013-03,2013-04,Árbol de decisión,0,0.3563218390804598,0.5,0,False,False,False
+14,2013-03,2013-04,Árbol de decisión,0,0.3563218390804598,0.5,0,False,False,False
+37,2013-03,2013-04,Árbol de decisión,0,0.005405405405405406,0.5,0,False,False,False
+41,2013-03,2013-04,Árbol de decisión,0,0.005405405405405406,0.5,0,False,False,False
+47,2013-03,2013-04,Árbol de decisión,0,0.005405405405405406,0.5,0,False,False,False
+56,2013-03,2013-04,Árbol de decisión,0,0.005405405405405406,0.5,0,False,False,False
+16,2013-04,2013-05,Árbol de decisión,0,0.005405405405405406,0.5,0,False,False,False
+20,2013-04,2013-05,Árbol de decisión,0,0.005405405405405406,0.5,0,False,False,False
+26,2013-04,2013-05,Árbol de decisión,0,0.005405405405405406,0.5,0,False,False,False
+35,2013-04,2013-05,Árbol de decisión,0,0.005405405405405406,0.5,0,False,False,False
+49,2013-04,2013-05,Árbol de decisión,0,0.0,0.5,0,False,False,False
+5,2013-05,2013-06,Árbol de decisión,0,0.005405405405405406,0.5,0,False,False,False
+14,2013-05,2013-06,Árbol de decisión,0,0.005405405405405406,0.5,0,False,False,False
+28,2013-05,2013-06,Árbol de decisión,0,0.0,0.5,0,False,False,False
+50,2013-05,2013-06,Árbol de decisión,0,0.3563218390804598,0.5,0,False,False,False
+52,2013-05,2013-06,Árbol de decisión,1,0.3563218390804598,0.5,0,False,True,False
+54,2013-05,2013-06,Árbol de decisión,0,0.005405405405405406,0.5,0,False,False,False
+58,2013-05,2013-06,Árbol de decisión,0,0.005405405405405406,0.5,0,False,False,False
+7,2013-06,2013-07,Árbol de decisión,0,0.0,0.5,0,False,False,False
+29,2013-06,2013-07,Árbol de decisión,0,0.3563218390804598,0.5,0,False,False,False
+31,2013-06,2013-07,Árbol de decisión,1,0.3563218390804598,0.5,0,False,True,False
+33,2013-06,2013-07,Árbol de decisión,0,0.005405405405405406,0.5,0,False,False,False
+37,2013-06,2013-07,Árbol de decisión,0,0.005405405405405406,0.5,0,False,False,False
+43,2013-06,2013-07,Árbol de decisión,0,0.005405405405405406,0.5,0,False,False,False
+52,2013-06,2013-07,Árbol de decisión,0,0.005405405405405406,0.5,0,False,False,False
+8,2013-07,2013-08,Árbol de decisión,0,0.3563218390804598,0.5,0,False,False,False
+10,2013-07,2013-08,Árbol de decisión,1,0.3563218390804598,0.5,0,False,True,False
+12,2013-07,2013-08,Árbol de decisión,0,0.005405405405405406,0.5,0,False,False,False
+16,2013-07,2013-08,Árbol de decisión,0,0.005405405405405406,0.5,0,False,False,False
+22,2013-07,2013-08,Árbol de decisión,0,0.005405405405405406,0.5,0,False,False,False
+31,2013-07,2013-08,Árbol de decisión,0,0.005405405405405406,0.5,0,False,False,False
+45,2013-07,2013-08,Árbol de decisión,0,0.0,0.5,0,False,False,False
+1,2013-08,2013-09,Árbol de decisión,0,0.005405405405405406,0.5,0,False,False,False
+10,2013-08,2013-09,Árbol de decisión,0,0.005405405405405406,0.5,0,False,False,False
+24,2013-08,2013-09,Árbol de decisión,0,0.0,0.5,0,False,False,False
+46,2013-08,2013-09,Árbol de decisión,0,0.3563218390804598,0.5,0,False,False,False
+48,2013-08,2013-09,Árbol de decisión,1,0.3563218390804598,0.5,0,False,True,False
+50,2013-08,2013-09,Árbol de decisión,0,0.005405405405405406,0.5,0,False,False,False
+54,2013-08,2013-09,Árbol de decisión,0,0.005405405405405406,0.5,0,False,False,False
+3,2013-09,2013-10,Árbol de decisión,0,0.0,0.5,0,False,False,False
+25,2013-09,2013-10,Árbol de decisión,0,0.3563218390804598,0.5,0,False,False,False
+27,2013-09,2013-10,Árbol de decisión,1,0.3563218390804598,0.5,0,False,True,False
+29,2013-09,2013-10,Árbol de decisión,0,0.005405405405405406,0.5,0,False,False,False
+33,2013-09,2013-10,Árbol de decisión,0,0.005405405405405406,0.5,0,False,False,False
+39,2013-09,2013-10,Árbol de decisión,0,0.005405405405405406,0.5,0,False,False,False
+48,2013-09,2013-10,Árbol de decisión,0,0.005405405405405406,0.5,0,False,False,False
+4,2013-10,2013-11,Árbol de decisión,0,0.3563218390804598,0.5,0,False,False,False
+6,2013-10,2013-11,Árbol de decisión,1,0.3563218390804598,0.5,0,False,True,False
+8,2013-10,2013-11,Árbol de decisión,0,0.005405405405405406,0.5,0,False,False,False
+12,2013-10,2013-11,Árbol de decisión,0,0.005405405405405406,0.5,0,False,False,False
+18,2013-10,2013-11,Árbol de decisión,0,0.005405405405405406,0.5,0,False,False,False
+27,2013-10,2013-11,Árbol de decisión,0,0.005405405405405406,0.5,0,False,False,False
+41,2013-10,2013-11,Árbol de decisión,0,0.0,0.5,0,False,False,False
+6,2013-11,2013-12,Árbol de decisión,0,0.005405405405405406,0.5,0,False,False,False
+20,2013-11,2013-12,Árbol de decisión,0,0.0,0.5,0,False,False,False
+42,2013-11,2013-12,Árbol de decisión,0,0.3563218390804598,0.5,0,False,False,False
+44,2013-11,2013-12,Árbol de decisión,1,0.3563218390804598,0.5,0,False,True,False
+46,2013-11,2013-12,Árbol de decisión,0,0.005405405405405406,0.5,0,False,False,False
+50,2013-11,2013-12,Árbol de decisión,0,0.005405405405405406,0.5,0,False,False,False
+56,2013-11,2013-12,Árbol de decisión,0,0.005405405405405406,0.5,0,False,False,False

@@ -1,0 +1,4 @@
+﻿Modelo,Umbral,Exactitud,Precisión,Recall,F1,ROC/AUC,Recompras detectadas,Recompras perdidas,Falsas alarmas,Aciertos sin recompra,Alertas totales
+Referencia mayoritaria,0.5,0.9125,0.0,0.0,0.0,0.5,0,7,0,73,0
+Regresión logística,0.1,0.775,0.2608695652173913,0.8571428571428571,0.4,0.8258317025440314,6,1,17,56,23
+Árbol de decisión,0.5,0.9125,0.0,0.0,0.0,0.8972602739726028,0,7,0,73,0

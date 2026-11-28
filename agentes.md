@@ -4,22 +4,40 @@ Curso ISW-911 · Caso Grupo Innova S.A. · Python y Jupyter Notebook
 
 Equipo: Miguel, Brian, Jeremy y Cristopher.
 
-## Estado actual
+## Estado actual al 28 de noviembre de 2026
 
-- [x] Leer el enunciado y resumir los requisitos de entrega y defensa.
-- [x] Confirmar que el repositorio tiene el CSV procesado del workshop 4 y revisar su estructura inicial.
-- [x] Crear las carpetas y registrar un reparto propuesto.
-- [x] Registrar los ocho KPIs aprobados por el profesor y revisar los campos disponibles en el CSV.
-- [x] Redactar la introducción del notebook con el contexto de Chinook y los KPIs.
-- [x] Investigar una ruta de clasificación vinculada al KPI-04, comprobar las etiquetas observables en el CSV y diseñar las cuatro fases de la entrega.
-- [x] Implementar la Fase I de Brian con la pregunta de recompra, EDA, tabla cliente-mes, diccionario y comprobaciones de trazabilidad.
-- [ ] Ratificar con el equipo la pregunta de recompra implementada.
-- [x] Conciliar el CSV con las exportaciones originales del Lab 4 e incorporar diciembre de 2013 como mes de resultado.
-- [x] Ejecutar las 13 celdas de código de la Fase I y revisar las cuatro figuras del EDA con Matplotlib.
-- [x] Definir el preprocesamiento y la partición temporal en la Fase II de Jeremy.
-- [x] Entrenar y ajustar al menos dos modelos supervisados con validación temporal, dejando 2013 reservado.
-- [ ] Evaluar ambos modelos en prueba independiente, seleccionar uno y explicar sus variables más importantes.
-- [ ] Ejecutar el notebook completo y preparar y ensayar la defensa.
+Revisión del trabajo local sobre `main` (`04b4daf)), comparado con el [enunciado del Proyecto III](Proyecto%20%23%203%20Minera%20de%20Datos.pdf). Los porcentajes corresponden a la rúbrica.
+
+La última revisión del notebook guardado encontró 31 celdas de código con registro de ejecución y sin errores guardados. Los conteos de la tabla comparativa final coinciden con el CSV de predicciones.
+
+| Tarea | Responsable | Estado | Resultados y evidencia |
+| --- | --- | --- | --- |
+| Pregunta de negocio y EDA, parte de Fase I (10 %) | Brian | Completado | Completos. Pregunta de recompra al mes siguiente vinculada al KPI-04. Perfil de 2.240 líneas, 412 facturas y 59 clientes, revisión de calidad, atípicos y correlaciones, y cuatro figuras de EDA. |
+| Ingeniería y preparación, resto de Fase I | Brian y Jeremy | Completado | Completos. [Tabla cliente-mes](resultados/tablas/cliente_mes.csv) con 405 casos y 40 recompras, diccionario y controles de trazabilidad. Pipelines con imputación, codificación de país y escalado para logística. División por mes del resultado, con 325 casos de desarrollo y 80 de prueba. |
+| Estratificación solicitada en la Fase I | Equipo, con Jeremy | Sin terminar | Faltantes. El PDF pide estratificar si hay desbalance. El notebook usa un corte cronológico para representar predicciones futuras y conservar los meses completos. Los pesos de clase son parte del ajuste y la proporción de positivos varía por año. Falta confirmar con el profesor si acepta esta justificación. Los resultados de 2013 se usaron para la comparación final y quedaron fuera del ajuste. |
+| Ratificación de la pregunta | Equipo | Sin terminar | Faltantes. Hay una pregunta implementada, pero todavía no consta su ratificación por los cuatro integrantes. |
+| Fase II. Modelado y entrenamiento (30 %) | Jeremy | Completado | Completos. Logística y árbol ajustados con tres bloques temporales de validación y comparados con una referencia mayoritaria. F1 positivo de validación de 0,3048 y 0,5484, respectivamente. Umbrales fijados en 0,10 y 0,50. El AUC anual de 2012 queda indefinido porque hubo cero recompras. [Protocolo](resultados/tablas/fase2_protocolo.json) · [Resumen de validación](resultados/tablas/fase2_resumen_validacion.csv). |
+| Reproducibilidad de la entrega | Equipo | Verificada para las fases I a III | La ejecución en copia temporal reprodujo 16 CSV y generó 10 figuras con las dependencias instaladas. El README y el protocolo coinciden en Python 3.13.17. Queda alinear la guía de ejecución con el notebook, que incluye `%pip install matplotlib` entre las celdas de análisis. |
+| Fase III. Evaluación, selección e importancia (20 %) | Miguel | Completado | Completos. Comparación sobre 80 casos de 2013, curvas ROC, matrices de confusión, predicciones por caso y análisis de errores. Se eligió la logística por F1 de recompra de 0,40, con seis de siete recompras detectadas y 17 falsas alarmas. El árbol tuvo el mayor AUC (0,8973) y emitió cero alertas con su umbral de 0,50. En validación de 2010 y 2011, el gasto de los últimos 90 días tuvo la mayor caída media de F1 por permutación (0,1621). |
+| Fase IV. Impacto y recomendaciones (10 %) | Cristopher | Sin terminar | Faltantes. Hay tres propuestas y un guion en esta bitácora. Faltan tres decisiones sustentadas en los resultados finales y una presentación ejecutiva que traduzca las métricas a impacto operativo y muestre las variables más influyentes. Miguel calcula la importancia en su fase para que Cristopher la incorpore. |
+| Defensa oral y dominio individual (30 %) | Equipo | No iniciado en el repositorio | Faltantes. Falta evidencia del ensayo de 20 minutos de exposición y 5 de preguntas técnicas individuales. |
+
+### Autoría según los commits locales y las referencias disponibles
+
+| Autor en Git | Commits | Avance registrado |
+| --- | --- | --- |
+| Miguel Cruz (Mygyx) | `8f991af`, `50e1fd7` | Commit inicial con el README (`8f991af`). Estructura del proyecto, CSV del workshop, investigación, plan de trabajo e introducción del notebook (`50e1fd7`). |
+| Brian Rodriguez | `114d6a0`, `47f68b7`, `d980d5c`, `241f98a`, `b139ef6`, `6fd4151`, `f992a5f`, `4c4ee0d` | Carga y calidad, etiqueta cliente-mes, análisis de variables, controles y exportaciones, figuras, inclusión de diciembre de 2013, guía del kernel y actualización posterior del notebook que incorporó la celda de instalación. |
+| jrodriguezes (Jeremy Rodriguez Esquivel) | `f1768c1`, `04b4daf` | Partición temporal, pipelines, ajuste, validación y exportaciones. Documentación de ejecución y del intercambio de fases con Miguel. |
+| Cristopher | Sin commits identificados | Tiene asignadas las recomendaciones y la presentación. Git solo acredita aportes registrados bajo las identidades visibles. |
+
+### Entrega de Miguel y siguiente paso
+
+La [tabla comparativa](resultados/tablas/fase3_comparacion_prueba.csv) incluye las métricas, los aciertos sin recompra y las alertas totales. La logística obtuvo 56 aciertos sin recompra y 23 alertas. Los conteos se verificaron con las [240 predicciones de prueba](resultados/tablas/fase3_predicciones_prueba.csv). También quedaron guardadas la [tabla de importancia](resultados/tablas/fase3_importancia_logistica.csv), las [curvas ROC con los umbrales fijados](resultados/figuras/fase3_curvas_roc.png), las [matrices de confusión](resultados/figuras/fase3_matrices_confusion.png), la [gráfica mensual](resultados/figuras/fase3_desempeno_mensual_logistica.png) y la [gráfica de importancia](resultados/figuras/fase3_importancia_logistica.png).
+
+El [notebook](notebooks/proyecto_3.ipynb) incluye una comparación exploratoria con un cupo común de 23 revisiones en 2013. El árbol priorizó las siete recompras observadas y la logística seis. La selección principal se mantiene por F1 con los umbrales fijados en la Fase II.
+
+Miguel entrega estos resultados a Cristopher para que traduzca las 23 alertas, las seis recompras detectadas y las 17 falsas alarmas a implicaciones operativas y sustente las tres decisiones de la Fase IV. En la defensa, el F1 de 0,40 se presenta como el resultado observado en el mismo bloque de 2013 usado para comparar y elegir el modelo. El equipo aún debe documentar la ratificación de la pregunta y confirmar con el profesor si acepta el corte temporal.
 
 ## Estructura del repositorio
 
@@ -27,13 +45,15 @@ Equipo: Miguel, Brian, Jeremy y Cristopher.
 | --- | --- |
 | [README.md](README.md) | Estructura del repositorio y rutas de carga según el directorio de trabajo. |
 | [data/](data/) | Contiene [data_process.csv](data/data_process.csv), el insumo procesado del workshop 4. |
-| [proyecto_3.ipynb](notebooks/proyecto_3.ipynb) | Introducción y fases I y II ejecutadas: EDA, partición, pipelines, ajuste y modelos entrenados. Fases III y IV pendientes. |
+| [proyecto_3.ipynb](notebooks/proyecto_3.ipynb) | Introducción y fases I a III ejecutadas. Incluye EDA, entrenamiento, comparación de 2013, análisis de errores e importancia de variables. |
 | [resultados/figuras/](resultados/figuras/) | Gráficos exportados para comparación y defensa. |
-| [resultados/tablas/](resultados/tablas/) | Tablas exportadas, incluida la comparación sobre el conjunto de prueba. |
-| [presentacion/](presentacion/) | Diapositivas ejecutivas y material de ensayo. |
+| [resultados/tablas/](resultados/tablas/) | Tablas de EDA, datos cliente-mes, validación temporal, predicciones de 2013 e importancia por permutación. |
+| [presentacion/](presentacion/) | Carpeta reservada para las diapositivas. Actualmente solo contiene `.gitkeep`. |
 | [agentes.md](agentes.md) | Estado, decisiones y aportes del equipo. |
 
 ## Reparto actual
+
+Brian Rodriguez es el responsable de la **Fase I**, Jeremy Rodriguez Esquivel de la **Fase II** y Miguel Cruz de la **Fase III**.
 
 | Responsable | Trabajo principal | Entrega al equipo |
 | --- | --- | --- |
@@ -149,7 +169,7 @@ El enunciado del proyecto, en sus fases I a IV y rúbrica, define los requisitos
 
 ## Entregables y criterios de cierre
 
-- **Notebook reproducible.** Usar pandas, NumPy, Matplotlib o Seaborn y scikit-learn. Documentar en Markdown el objetivo, EDA, limpieza, ingeniería de variables, partición, modelos y conclusiones. Fijar la semilla cuando corresponda, estratificar si hay desbalance y el esquema lo permite, y ajustar las transformaciones y los hiperparámetros con entrenamiento.
+- **Notebook reproducible.** Usar pandas, NumPy, Matplotlib o Seaborn y scikit-learn. Documentar en Markdown el objetivo, EDA, limpieza, ingeniería de variables, partición, modelos y conclusiones. Fijar la semilla, estratificar si hay desbalance según el enunciado y ajustar las transformaciones y los hiperparámetros con entrenamiento. La aceptación de la partición cronológica está pendiente de confirmación.
 - **Comparación sobre prueba independiente.** En clasificación, incluir matriz de confusión, exactitud y curva ROC/AUC. Si hay desbalance, añadir precisión, recall y F1 para interpretar la clase minoritaria. En regresión, incluir RMSE, MAE y R². Justificar el modelo elegido y mostrar la importancia de sus variables.
 - **Presentación ejecutiva.** Apuntar a 12 láminas dentro del límite indicado de 12 a 15. Explicar el impacto de las métricas para Grupo Innova S.A. y sustentar tres decisiones concretas. Ensayar 20 minutos de exposición y 5 de preguntas técnicas individuales.
 - **Rúbrica completa compartida el 23 de noviembre.** EDA y preparación 10 %, modelado y entrenamiento 30 %, evaluación y selección 20 %, impacto y recomendaciones 10 %, defensa oral y dominio individual 30 %. La defensa dura 20 minutos de exposición y 5 de preguntas individuales. El enunciado también evalúa la participación individual y la colaboración con el equipo. En el reparto vigente, Jeremy implementa la codificación, el escalado y la partición dentro de su flujo de entrenamiento. Esos requisitos completan la Fase I del enunciado junto con el EDA y la ingeniería de variables de Brian.
@@ -196,13 +216,15 @@ Matplotlib que ya existía.
 | 2026-11-21 | Simplificación de carpetas | El CSV quedó directamente en `data/` y los notebooks directamente en `notebooks/`. En `resultados/` se mantienen carpetas para figuras y tablas. | Registrar los KPIs aprobados y usar `data/data_process.csv` para iniciar el análisis. |
 | 2026-11-21 | Incorporación de KPIs | Se documentaron los ocho KPIs del Word, se revisaron las columnas del CSV y se redactó la introducción del notebook. | Acordar el KPI prioritario y comprobar la viabilidad de la pregunta predictiva. |
 | 2026-11-21 | Investigación y diseño | Se contrastaron rúbrica, KPIs, CSV y fuentes metodológicas. Se documentaron 405 casos observables y 40 recompras, las cuatro fases, los productos de cada integrante y el guion de defensa. | Acordar el objetivo y verificar la cobertura al cierre de diciembre de 2013 antes de construir el conjunto de modelado. |
-| 2026-11-23 | Fase I de Brian, con asistencia de Codex | Intercambio de fases con Miguel registrado. Se revisaron el KPI-04 del Proyecto II y la organización de los scripts de R. Se implementaron el EDA, la etiqueta, 398 ejemplos cliente-mes, seis tablas derivadas y el diccionario. Cálculos y controles temporales ejecutados. Gráficas pendientes de Matplotlib. | Ejecutar las gráficas en Colab, ratificar la pregunta y confirmar cobertura de diciembre. Miguel continúa con partición y modelos. |
-| 2026-11-23 | Organización de commits de Brian, con asistencia de Codex | Fase I organizada en cinco avances. Carga y calidad en `114d6a0`, construcción de casos en `47f68b7`, análisis de variables en `d980d5c` y validación y exportaciones en `241f98a`. El quinto avance incorpora las instrucciones y el reparto actualizado. | Ejecutar las gráficas en Colab y revisar la entrega con Miguel. |
-| 2026-11-23 | Cierre del EDA de Brian, con asistencia de Codex | Dependencias oficiales obtenidas desde PyPI. Se ejecutaron las 13 celdas de código de la Fase I, se revisaron cuatro figuras y se añadieron conclusiones y puntos de defensa. Se comprobó la rúbrica completa, incluido el 30 % de defensa. El quinto commit incorpora este cierre. | Ratificar la pregunta de recompra y confirmar la cobertura de diciembre. Miguel continúa con partición, preprocesamiento y modelos. |
-| 2026-11-23 | Inclusión de diciembre por Brian, con asistencia de Codex | CSV conciliado con las exportaciones originales del Lab 4. Se adopta diciembre como mes de resultado, se agregan siete casos y una recompra y se concilian 59 tasas mensuales con el Proyecto II. Las tablas y explicaciones se actualizan a 405 casos y 40 recompras. | Miguel recibe 325 casos anteriores a 2013 y 80 casos de 2013 para registrar su protocolo temporal. El equipo ratifica la pregunta de recompra. |
+| 2026-11-23 | Fase I de Brian | Intercambio de fases con Miguel registrado. Se revisaron el KPI-04 del Proyecto II y la organización de los scripts de R. Se implementaron el EDA, la etiqueta, 398 ejemplos cliente-mes, seis tablas derivadas y el diccionario. Cálculos y controles temporales ejecutados. Gráficas pendientes de Matplotlib. | Ejecutar las gráficas en Colab, ratificar la pregunta y confirmar cobertura de diciembre. Miguel continúa con partición y modelos. |
+| 2026-11-23 | Organización de commits de Brian | Fase I organizada en cinco avances. Carga y calidad en `114d6a0`, construcción de casos en `47f68b7`, análisis de variables en `d980d5c` y validación y exportaciones en `241f98a`. El quinto avance incorpora las instrucciones y el reparto actualizado. | Ejecutar las gráficas en Colab y revisar la entrega con Miguel. |
+| 2026-11-23 | Cierre del EDA de Brian | Dependencias oficiales obtenidas desde PyPI. Se ejecutaron las 13 celdas de código de la Fase I, se revisaron cuatro figuras y se añadieron conclusiones y puntos de defensa. Se comprobó la rúbrica completa, incluido el 30 % de defensa. El quinto commit incorpora este cierre. | Ratificar la pregunta de recompra y confirmar la cobertura de diciembre. Miguel continúa con partición, preprocesamiento y modelos. |
+| 2026-11-23 | Inclusión de diciembre por Brian | CSV conciliado con las exportaciones originales del Lab 4. Se adopta diciembre como mes de resultado, se agregan siete casos y una recompra y se concilian 59 tasas mensuales con el Proyecto II. Las tablas y explicaciones se actualizan a 405 casos y 40 recompras. | Miguel recibe 325 casos anteriores a 2013 y 80 casos de 2013 para registrar su protocolo temporal. El equipo ratifica la pregunta de recompra. |
 | 2026-11-23 | Guía de ejecución para el equipo | README ampliado con selección del kernel, extensiones Python y Jupyter, instalación de dependencias por entorno y ejecución mediante Restart y Run All. Se documentaron los errores de biblioteca ausente y variable sin definir observados durante la ejecución de Brian. | Cada integrante prepara su entorno y ejecuta el notebook desde el principio antes de continuar su fase. |
 | 2026-11-24 | Fase II de Jeremy | Intercambio con Miguel registrado en el reparto vigente. Partición temporal, pipelines, referencia y dos algoritmos ajustados con validación 2010–2012; 2013 reservado. Se ejecutaron las 21 celdas de código de las fases I y II y se generaron dos figuras y ocho archivos de control/validación. | Miguel continúa la Fase III: comparación en prueba, errores e importancia. Cristopher prepara la interpretación ejecutiva. |
+| 2026-11-27 | Revisión del proyecto | Se contrastaron los commits, el PDF y los archivos de salida. Se identificaron la comprobación de estratificación pendiente, las discrepancias de ejecución y la ausencia de resultados finales de prueba y presentación. | Confirmar el protocolo y completar la evaluación de 2013. |
+| 2026-11-28 | Fase III · Miguel | Se completaron y reprodujeron la comparación de 2013, las figuras, las exportaciones, la selección de la regresión logística y su interpretación por permutación. | Entregar los resultados a Cristopher para la Fase IV y preparar la defensa del equipo. |
 
-Se corrigió el correo de autor y committer de los cinco commits locales de Brian para usar `163876255+Brianrp19@users.noreply.github.com`. La configuración de este repositorio usa ese correo para los siguientes commits. El cambio se realizó después del rechazo GH007 por privacidad.
+Durante el trabajo de Brian se corrigió el correo de autor y committer de cinco commits para usar su dirección privada de GitHub después del rechazo GH007.
 
-En cada sesión, agregar una fila con fecha, participantes, avance comprobable, enlace al archivo o commit si existe y siguiente paso. Actualizar las casillas cuando el avance se pueda verificar. Registrar aquí las decisiones que cambien el objetivo, los datos o la evaluación y por qué se tomaron.
+En cada sesión, agregar una fila con fecha, participantes, avance comprobable, enlace al archivo o commit si existe y siguiente paso. Actualizar el estado y los resultados cuando el avance se pueda verificar. Registrar aquí las decisiones que cambien el objetivo, los datos o la evaluación y por qué se tomaron.
